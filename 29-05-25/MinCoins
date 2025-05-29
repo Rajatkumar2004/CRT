@@ -9,8 +9,7 @@ public class MinCoins {
 
         for (int coin : coins) {
             for (int i = coin; i <= amount; i++) {
-                if (dp[i - coin] != Integer.MAX_VALUE)
-                    dp[i] = Math.min(dp[i], 1 + dp[i - coin]);
+                if (dp[i - coin] != Integer.MAX_VALUE) dp[i] = Math.min(dp[i], 1 + dp[i - coin]);
             }
         }
 
